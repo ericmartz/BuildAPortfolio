@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eric's Portfolio Site</title>
+
+	<meta charset="utf-8">
+	<meta name="description" content="Eric Martz's Portfolio Site for Udacity">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,100' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+	<!-- 
+
+		Notes:
+		Tried both col-sm-* and col-md-* for column widths.  I felt the md breakpoint at 970px was too wide.  
+		TBH, I don't like the 768 breakpoint, but I wanted to try my hand at Bootstrap so I went with it.
+		Thought about customizing the framework for smaller breakpoints, but I figure that is probably a bad practice so I decided against it.
+
+		Wasn't sure about using the picture tag, but decided to go with it.  It looks like it does not have a lot of support yet.
+		TODO-maybe: Maybe use PictureFill to handle responsive images? Not sure how much time I want to spend on the initial project.
+	-->
+	<div class="container-fluid">
+		<header>
+			<div class="row">
+				<div class="col-sm-6">
+					<img src="img/udacity-logo.jpg" alt="Udacity Logo: A stylized U contained within a circle">
+				</div>
+				<div class="col-sm-6 text-right text-uppercase">
+					<h1>Eric Martz</h1>
+					<h4>Aspiring Web Developer</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<hr>
+				</div>
+			</div>
+		</header>
+		<section id="main-content">
+			<div class="row">
+				<div class="col-sm-12">
+					<picture>
+						<source srcset="http://www.lorempixum.com/g/500/300/city" media="(max-width: 500px)">
+				 		<source srcset="http://www.lorempixum.com/g/750/350/city" media="(max-width: 750px)">
+				 		<img class="img-responsive" src="http://www.lorempixum.com/g/1000/450/city" alt="Main Image">
+					</picture>
+				</div>
+			</div>
+		</section>
+		<section id="featured-work">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2 class="text-muted">Featured Work</h2>
+				</div>
+			</div>
+			<div class="row">
+				<!-- Felt like these images were small enough to begin with that they would not need separate images for smaller screens -->
+				<div class="col-sm-4 text-center">
+					<img class="img-responsive" src="http://www.lorempixum.com/g/350/250/sports" alt="Featured Work 1">
+					<h3>Appify</h3>
+					<p>https://github.com/udacity/appify</p>
+				</div>
+				<div class="col-sm-4 text-center">
+					<img class="img-responsive" src="http://www.lorempixum.com/g/350/250/technics" alt="Featured Work 2">
+					<h3>Sunflower</h3>
+					<p>https://github.com/udacity/sunflower</p>
+				</div>
+				<div class="col-sm-4 text-center">
+					<img class="img-responsive" src="http://www.lorempixum.com/g/350/250/nature" alt="Featured Work 3">
+					<h3>Bokeh</h3>
+					<p>https://github.com/udacity/bokeh</p>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>
