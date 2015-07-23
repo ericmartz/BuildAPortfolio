@@ -13,8 +13,5 @@
 *.jpg
 *.png
 *.gif
-images/*
-!images/gallery
-images/gallery/*
 
 !.gitignore
