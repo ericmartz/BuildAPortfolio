@@ -1,0 +1,70 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	color: #747704;
+	font-size: 16px;
+}
+
+.container-fluid {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+h1 {
+	font-weight: 100;
+}
+
+h2,
+h3,
+h4,
+p {
+	margin: .25em 0;
+	font-weight: 400;
+}
+
+div.row { 
+	margin: 0;
+}
+
+.text-muted { /* I feel bad using this because this was used in a video, but I could not think of a better name :-/ */
+	color: #bcbbbb;
+}
+
+#featured-work {
+	margin-top: 1em;
+}
+
+hr {
+	border-top: .25em solid #ddd;
+}
+
+@media screen and (min-width: 769px) and (max-width: 880px) {
+	/* Between 880px and 769, the text at the bottom starts to run together, so I am making the text smaller for this size */
+	p {
+		font-size: 0.75em; /* Wanted 12px so 12/16 = .75em */
+	}
+
+	h3 {
+		font-size: 1.125em; /* Wanted 18px so 18/16 = 1.125em */
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.text-right {
+		text-align: center;
+	}
+
+	img {
+		display: block; /* This is specifically to fix the Udacity logo.  Otherwise, it does not properly center */
+		margin: 0 auto;
+	}
+
+	#featured-work .row div { /*Adding some extra margin to better differentiate the different featured works */
+		margin-top: 3em;
+	}
+
+	#featured-work .row div:first-child { /* This cancels out the previous rule for the first child. */
+		margin-top: 0;
+	}
+}
