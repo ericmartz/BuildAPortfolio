@@ -23,8 +23,8 @@ p {
 	font-weight: 400;
 }
 
-div.row { 
-	margin: 0;
+.row { /* This used to be named div.row, and I changed to .row.  Under 768px, there was a margin in Bootstrap that causes horizontal scrolling. */
+	margin: 0; /* Setting the margin to 0 takes care of that.  Need to see if there is something else I can do. (Or am doing wrong) */
 }
 
 .text-muted { /* I feel bad using this because this was used in a video, but I could not think of a better name :-/ */
@@ -51,6 +51,11 @@ hr {
 }
 
 @media screen and (max-width: 768px) {
+	.container-fluid { /* Added some padding to the top and bottom for mobile devices at the advice of team member Yann. */
+		padding-top: 2em; /* 2ems translates to 32 pixels which may be too much, but I liked it. */
+		padding-bottom: 2em;
+	}
+
 	.text-right {
 		text-align: center;
 	}
@@ -60,11 +65,9 @@ hr {
 		margin: 0 auto;
 	}
 
-	#featured-work .row div { /*Adding some extra margin to better differentiate the different featured works */
+	/* This was named #featured-work .row div to catch the appropriate element in the DOM.  Changed to what you see 
+	below  after the code review. */
+	.add-margin-mobile { /*Adding some extra margin to better differentiate the different featured works */
 		margin-top: 3em;
-	}
-
-	#featured-work .row div:first-child { /* This cancels out the previous rule for the first child. */
-		margin-top: 0;
 	}
 }
