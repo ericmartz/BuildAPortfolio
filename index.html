@@ -26,16 +26,16 @@
 	<![endif]-->
 </head>
 <body>
-	<!-- 
+	<!--
 		Notes:
-		Tried both col-sm-* and col-md-* for column widths.  I felt the md breakpoint at 970px was too wide.  
+		Tried both col-sm-* and col-md-* for column widths.  I felt the md breakpoint at 970px was too wide.
 		TBH, I don't like the 768 breakpoint, but I wanted to try my hand at Bootstrap so I went with it.
 		Thought about customizing the framework for smaller breakpoints, but I figure that is probably a bad practice so I decided against it.
 
 		Wasn't sure about using the picture tag, but decided to go with it.  It looks like it does not have a lot of support yet.
 		TODO-maybe: Maybe use PictureFill to handle responsive images? Not sure how much time I want to spend on the initial project.
-		UPDATE TODO - I added Picturefill and to be honest I am pretty stoked. As far as I can tell this website is very responsive. 
-		May not be professional quality, but I am very happy.  :-) 
+		UPDATE TODO - I added Picturefill and to be honest I am pretty stoked. As far as I can tell this website is very responsive.
+		May not be professional quality, but I am very happy.  :-)
 
 		Tested out on Chrome 43, IE 11 and on IE11 using the IE8 user agent string.  Everything seemed to work just fine.
 
@@ -45,7 +45,7 @@
 		Domain images.  There doesn't seem to be a standard for citing work on a website as far as I could find (i.e.: there is no MLA for HTML).
 		So I just linked to the photographer's profile on Flickr.  I figured that would work well enough.
 
-		Last note, hopefully.  At the advice of the last code reviewer, I totally added modals to the Featured Work.  Yeah, I'm feeling good about myself.  :-D  
+		Last note, hopefully.  At the advice of the last code reviewer, I totally added modals to the Featured Work.  Yeah, I'm feeling good about myself.  :-D
 	-->
 	<div class="container-fluid">
 		<header>
@@ -68,7 +68,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<!-- Image by M. Moers -->
-					<!-- 
+					<!--
 						I chose this image because it is so wide.  When you resize the browser to under 500px (or on a mobile device) it will serve
 						up a cropped photo to make it look better.  Can't say everything is perfect for breakpoints, but hey, thanks Udacity for teaching me how do do this.
 					-->
@@ -76,7 +76,8 @@
 						<picture>
 							<source srcset="img/here-comes-the-weekend-800_medium_1x.jpg" media="(max-width: 500px)">
 							<source srcset="img/here-comes-the-weekend-1600_large_2x.jpg" media="(max-width: 800px)">
-							<img class="img-responsive" srcset="img/here-comes-the-weekend-1600_large_2x.jpg" alt="A storm moves in on a shipping yard.">
+							<img class="img-responsive" srcset="img/here-comes-the-weekend-1600_large_2x.jpg"
+							alt="A storm moves in on a shipping yard.">
 						</picture>
 					</a>
 				</div>
