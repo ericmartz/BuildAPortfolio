@@ -13,6 +13,8 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/main.css" />
 
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script src="js/picturefill.js"></script>
 
 	<!-- Picturefill indicates you must use a shim for the picture element.  I am using what is recommended by bootstrap -->
@@ -64,6 +66,10 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<!-- Image by M. Moers -->
+					<!-- 
+						I chose this image because it is so wide.  When you resize the browser to under 500px (or on a mobile device) it will serve
+						up a cropped photo to make it look better.  Can't say everything is perfect for breakpoints, but hey, thanks Udacity for teaching me how do do this.
+					-->
 					<a href="https://www.flickr.com/photos/mjmoers/19779760095/">
 						<picture>
 							<source srcset="img/here-comes-the-weekend-800_medium_1x.jpg" media="(max-width: 500px)">
@@ -83,30 +89,36 @@
 			<div class="row">
 				<!-- UDATE: These images are using the picture tag and Picturefill to serve up smaller images for mobile devices. :-)  Yeah, I'm excited.  -->
 				<div class="col-sm-4 text-center">
-					<picture>
-						<source srcset="img/bird-800_medium_1x.jpg" media="(max-width: 500px)">
-						<source srcset="img/bird-1600_large_2x.jpg" media="(max-width: 800px)">
-						<img class="img-responsive" srcset="img/bird-1600_large_2x.jpg" alt="A bird standing on an antenna">
-					</picture>
+					<a href="#birdModal" role="button" data-toggle="modal">
+						<picture>
+							<source srcset="img/bird-800_medium_1x.jpg" media="(max-width: 500px)">
+							<source srcset="img/bird-1600_large_2x.jpg" media="(max-width: 800px)">
+							<img class="img-responsive" srcset="img/bird-1600_large_2x.jpg" alt="A bird standing on an antenna">
+						</picture>
+					</a>
 					<h3>A Bird on an Antenna</h3>
 					<p><a href="https://www.flickr.com/photos/mars_/">by Marsel Minga</a></p>
 				</div>
 				<div class="col-sm-4 text-center add-margin-mobile">
-					<picture>
-						<source srcset="img/shipping-yard-800_medium_1x.jpg" media="(max-width: 500px)">
-						<source srcset="img/shipping-yard-1600_large_2x.jpg" media="(max-width: 800px)">
-						<img class="img-responsive" srcset="img/shipping-yard-1600_large_2x.jpg" alt="A shipping yard with lots of cranes">
-					</picture>
+					<a href="#shippingYardModal" role="button" data-toggle="modal">
+						<picture>
+							<source srcset="img/shipping-yard-800_medium_1x.jpg" media="(max-width: 500px)">
+							<source srcset="img/shipping-yard-1600_large_2x.jpg" media="(max-width: 800px)">
+							<img class="img-responsive" srcset="img/shipping-yard-1600_large_2x.jpg" alt="A shipping yard with lots of cranes">
+						</picture>
+					</a>
 					<h3>Shipping Yard</h3>
 					<p><a href="https://www.flickr.com/photos/mjmoers/">by M. Moers
 					</a></p>
 				</div>
 				<div class="col-sm-4 text-center add-margin-mobile">
-					<picture>
-						<source srcset="img/seagull-800_medium_1x.jpg" media="(max-width: 500px)">
-						<source srcset="img/seagull-1600_large_2x.jpg" media="(max-width: 800px)">
-						<img class="img-responsive" srcset="img/seagull-1600_large_2x.jpg" alt="A seagull above the water">
-					</picture>
+					<a href="#seagullsModal" role="button" data-toggle="modal">
+						<picture>
+							<source srcset="img/seagull-800_medium_1x.jpg" media="(max-width: 500px)">
+							<source srcset="img/seagull-1600_large_2x.jpg" media="(max-width: 800px)">
+							<img class="img-responsive" srcset="img/seagull-1600_large_2x.jpg" alt="A seagull above the water">
+						</picture>
+					</a>
 					<h3>Seagull</h3>
 					<p><a href="https://www.flickr.com/photos/xp1459/">by Benson Chan</a></p>
 				</div>
@@ -124,6 +136,74 @@
 				</div>
 			</div>
 		</footer>
+		<!-- Modals for the Featured work images -->
+		<!--
+			Didn't really have a great reason to put them down here.  Just thought it was the best place to oragnize them,
+			instead of in the middle of all the other code.  Thought that would be confusing.
+		-->
+		<div id="birdModal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+						<h4 class="modal-title">MM00A-1406 TVJ ANM BIRD D3000 55-200</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-sm-12">
+								<img class="img-responsive" src="img/bird-800_medium_1x.jpg" alt="A seagull above the water">
+								<p>Yup, that's the title of the image you see up there.  Nope, not sure why it is named that.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="shippingYardModal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+						<h4 class="modal-title">Cranes Galore, Maasvlakte</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-sm-12">
+								<img class="img-responsive" src="img/shipping-yard-800_medium_1x.jpg" alt="A seagull above the water">
+								<p> This image, by M. Moers, shows a shipping yard with a lot of cranes.  It is pretty awesome.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="seagullsModal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+						<h4 class="modal-title">Caught in the Air</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-sm-12">
+								<img class="img-responsive" src="img/seagull-800_medium_1x.jpg" alt="A seagull above the water">
+								<p>This photo by Benson Chan shows a seagull floating in the air.  It appears to be looking for dinner.  Yeah, no idea what to write for this one.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
